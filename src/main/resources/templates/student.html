@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Page</title>
+</head>
+<body>
+
+    <h1>Welcome to Student Page</h1>
+    <a th:href="@{/user}">Navigate to - User Page</a>
+    <a href="/user">Navigate to - User Page</a>
+
+    <p>We're currently developing this page...</p>
+    <p th:text="${myStudent.name}">Showcase Object</p>
+    <p th:text="${myStudent.email}">Showcase Object</p>
+
+    <div th:object="${myStudent}">
+        <p th:text="*{name}">Showcase Object</p>
+        <p th:text="*{email}">Showcase Object</p>
+    </div>
+
+</body>
+</html>
+
